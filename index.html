@@ -25,6 +25,7 @@
         const min = 1
         const max = 5
         var current = 60
+        var index;
         
         var timer;
         var button = document.getElementById("button");
@@ -39,6 +40,7 @@
 
         function removeButton() {
             button.remove();
+            alert(database.substring(index-5, index +5))
         }
 
         function changeLetters() {
@@ -50,7 +52,7 @@
                 console.log(letters)
             }
             console.log(occurences)
-            var index = database.indexOf(letters.toLowerCase());
+            index = database.indexOf(letters.toLowerCase());
             console.log(index)
             console.log(database.substring(index-5, index +5))
             button.innerHTML = letters;
